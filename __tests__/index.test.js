@@ -1,6 +1,6 @@
-const scoreboard = require('../index');
+const updateScoreboard = require('../index');
 
-describe('#scoreboard', () => {
+describe('#updateScoreboard', () => {
   test('accepts a board and returns it if no name given', () => {
     const testBoard = {
       doug: 1,
@@ -9,7 +9,7 @@ describe('#scoreboard', () => {
       joey: 1
     };
 
-    expect(scoreboard(testBoard)).toEqual({
+    expect(updateScoreboard(testBoard)).toEqual({
       doug: 1,
       poonam: 1,
       sal: 1,
@@ -25,7 +25,7 @@ describe('#scoreboard', () => {
       joey: 1
     };
 
-    expect(scoreboard(testBoard, 'poonam')).toEqual({
+    expect(updateScoreboard(testBoard, 'poonam')).toEqual({
       doug: 1,
       poonam: 2,
       sal: 1,
